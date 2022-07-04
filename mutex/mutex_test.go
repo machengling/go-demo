@@ -1,14 +1,15 @@
-package main
+package mutex
 
 import (
 	"fmt"
 	"sync"
+	"testing"
 	"time"
 )
 
 var m sync.Mutex
 
-func main() {
+func TestLockUnlockTryLock(t *testing.T) {
 
 	w := sync.WaitGroup{}
 	w.Add(3)
